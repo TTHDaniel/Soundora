@@ -57,7 +57,7 @@ const server = http.createServer((request, response) => {
 
 
     //404as hiba
-    fs.readFile(path.join(rootDir, "fourohfour.html"), (error, content) => {
+    fs.readFile(path.join(rootDir, "404.html"), (error, content) => {
         if (error) {
             response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
             response.end("Cannot find the index.html file.");
