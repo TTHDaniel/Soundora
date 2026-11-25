@@ -50,6 +50,13 @@ const server = http.createServer((request, response) => {
         });
         return;
     }
+
+
+
+
+
+
+    //404as hiba
     fs.readFile(path.join(rootDir, "fourohfour.html"), (error, content) => {
         if (error) {
             response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
