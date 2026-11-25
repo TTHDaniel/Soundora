@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-MKn5NWVBEuQXJE7TSKSgPUmMiSCmVTfCsR+VSSeQpHnoyJQZZFn/kBn+Ht5jZDPQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="Javascript/script.js"></script>
 </head>
 
 <body>
@@ -20,7 +19,7 @@
             </button>
             <dialog class="drawer drawer-end" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
                 <div class="drawer-body mb-2 md:mb-0">
-                    <ul class="nav navbar-nav me-auto">
+                    <ul class="nav navbar-nav w-100 d-flex">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -34,31 +33,34 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <form class="hstack" role="search">
-                            <input class="form-control navbarSearch" type="search" placeholder="Search" aria-label="Search"/>
+                            <input class="form-control navbarSearch" type="search" placeholder="search" aria-label="Search"/>
                         </form>
-                        <li>
-                            <a href="#"><i class="bi bi-bag-fill"></i></a>
+                        <li class="ms-auto d-flex align-items-center">
+                            <a href="#">
+                                <img src="Assets/Icons/cart.png" class="cart-icon">
+                            </a>
                         </li>
-                </div>
-            </dialog>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <br><br>
+            <h1 class="title focus-in-contract">soundora</h1>
+            <h5 class="subtitle slide-in-blurred-bottom">a place for your favorite songs.</h5>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
-    </nav>
-
-    <div class="hero">
-        <br><br>
-        <h1 class="title focus-in-contract">soundora</h1>
-        <h5 class="subtitle slide-in-blurred-bottom">a place for your favorite songs.</h5>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-
-    <br><br><br>
-
-    <h1 class="smalltitle"> > DISCOVER THE COLLECTION</h1>
-    <hr class="spacer1">
-    <br><br><br>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
+        
+        <br><br><br>
+        
+        <h1 class="smalltitle"> > DISCOVER THE COLLECTION</h1>
+        <hr class="spacer1">
+        <br><br><br>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-+PW0IDVGGwmpaBQvcXY+W0BcpHpITFB3dSfSoGvDdHtLbrLpSbpGcvtQRM/BJpz+"
         crossorigin="anonymous"></script>
-</body>
-
-</html>
+        <script src="Javascript/script.js"></script>
+    </body>
+    
+    </html>
