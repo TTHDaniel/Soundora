@@ -3,7 +3,7 @@ A school web development project. A webshop for buying albums and music related 
 
 
 
-# Tools
+## Tools
 
 ### Designing apps
  - [Trello](https://trello.com/b/acvxgckf/soundora-trello)
@@ -14,5 +14,5 @@ A school web development project. A webshop for buying albums and music related 
  - VS Code
 
 
-# Developers
+## Developers
 Toth Daniel, Popany David, Mucsi Tamas
