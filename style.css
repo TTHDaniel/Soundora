@@ -43,7 +43,6 @@ body{
 }
 
 .hero{
-    background: #c46849;
     background: linear-gradient(0deg,rgba(196, 104, 73, 1) 0%, rgba(140, 71, 48, 1) 100%);
 }
 
