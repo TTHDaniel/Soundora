@@ -16,7 +16,6 @@ function typeWriter() {
     const currentPhrase = phrases[phraseIndex];
 
     searchBar.placeholder = currentPhrase.substring(0, charIndex);
-
     if (!isDeleting && charIndex < currentPhrase.length) {
         charIndex++;
         setTimeout(typeWriter, 80);
