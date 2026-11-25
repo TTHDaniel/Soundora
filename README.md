@@ -4,3 +4,9 @@ A school web development project. A webshop for buying albums and music related 
 
 # Developers
 Toth Daniel, Popany David, Mucsi Tamas
+
+# Designing apps
+## Trello
+https://trello.com/b/acvxgckf/soundora-trello
+## Figma
+xxx
