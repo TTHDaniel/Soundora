@@ -1,12 +1,8 @@
 const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
-const { error } = require("node:console");
-const { url } = require("node:inspector");
-const { json } = require("node:stream/consumers");
 
 const server = http.createServer((request, response) => {
-    // Egyszerű CORS-beállítás: a böngésző engedélyezi a szerver válaszait.
     response.setHeader("Access-Control-Allow-Origin", "*");
     response.setHeader("Access-Control-Allow-Headers", "Content-Type");
     response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
@@ -17,58 +13,56 @@ const server = http.createServer((request, response) => {
         return;
     }
 
+    const url = new URL(request.url, "http://localhost:3000");
+    const rootDir = path.join(__dirname, "..");
+
     const staticFiles = {
         "/style.css": { file: "style.css", contentType: "text/css; charset=utf-8" },
-        "Javascript/script.js": { file: "javascript/script.js", contentType: "text/javascript; charset=utf-8" }
-    }
-    const staticFile = staticFiles[request.url]
+        "/Javascript/script.js": { file: "Javascript/script.js", contentType: "text/javascript; charset=utf-8" }
+    };
 
-    console.log(`${request.method} ${request.url}`)
+    const staticFile = staticFiles[url.pathname];
+
+    console.log(`${request.method} ${url.pathname}`);
+
     if (request.method === "GET" && staticFile) {
-        fs.readFile(path.join(__dirname, staticFile.file), (error, content) => {
+        fs.readFile(path.join(rootDir, staticFile.file), (error, content) => {
             if (error) {
-                response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" })
-                response.end("A felület fájljai most nem érhetők el.")
+                response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+                response.end("The server files are unreachable!");
                 return;
             }
-            response.writeHead(200, { "Content-Type": staticFile.contentType })
-            response.end(content)
-
-        })
-
-    }
-
-    const url = new URL(request.url, "http://localhost:3000");
-
-    if (request.method === "GET" && url.pathname === "/") {
-        fs.readFile(path.join(__dirname, "index.html"), (error, content) => {
-            if (error) {
-                response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" })
-                response.end(error)
-                return;
-            }
-            response.writeHead(200, { "Content-Type": "text/html" })
-            response.end(content)
-
-
-        })
+            response.writeHead(200, { "Content-Type": staticFile.contentType });
+            response.end(content);
+        });
         return;
     }
 
-
-    response.writeHead(404, { "Content-Type": "application/json; charset=utf-8" });
-
-    response.end(JSON.stringify({ error: "Nincs ilyen útvonal." }));
-
-
-
-
-
+    if (request.method === "GET" && url.pathname === "/") {
+        fs.readFile(path.join(rootDir, "index.html"), (error, content) => {
+            if (error) {
+                response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+                response.end("Cannot find the index.html file.");
+                return;
+            }
+            response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+            response.end(content);
+        });
+        return;
+    }
+    fs.readFile(path.join(rootDir, "fourohfour.html"), (error, content) => {
+        if (error) {
+            response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+            response.end("Cannot find the index.html file.");
+            return;
+        }
+        response.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+        response.end(content);
+    });
+    // response.writeHead(404, { "Content-Type": "application/json; charset=utf-8" });
+    // response.end(JSON.stringify({ error: "This site does not exist!" }));
 });
 
 server.listen(3000, "127.0.0.1", () => {
     console.log("A szerver fut: http://127.0.0.1:3000");
 });
-
-
-
