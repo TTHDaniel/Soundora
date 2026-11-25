@@ -15,6 +15,21 @@ body{
     color: aliceblue;
 }
 
+.navbarSearch{
+    width: 50rem;
+    margin-left: 8rem;
+    background-color: rgb(36, 39, 44);
+}
+
+.navbarSearch:focus {
+    width: 50rem;
+    margin-left: 8rem;
+    background-color: rgb(36, 39, 44);
+    outline: none !important;
+    box-shadow: none;
+}
+
+
 .title{
     font-family: "Quantico", sans-serif;
     font-size: 5rem;
@@ -23,6 +38,7 @@ body{
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     text-transform: lowercase;
 }
+
 
 .subtitle{
     font-family: "Roboto Mono", monospace;
