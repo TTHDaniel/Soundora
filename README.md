@@ -5,12 +5,12 @@ A school web development project. A webshop for buying albums and music related 
 
 ## Tools
 
-### Designing apps
+#### Designing apps
  - [Trello](https://trello.com/b/acvxgckf/soundora-trello)
  - [Figma](xxx)
  - Krita
 
-### Development apps
+#### Development apps
  - VS Code
 
 
