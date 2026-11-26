@@ -1,12 +1,12 @@
 // searchbar animacio loop
 const searchBar = document.querySelector('input[type="search"]');
 const phrases = [
-    "Search for anything",
-    "Search for your favourite songs",
-    "Search for something new",
-    "Search for inspiration",
-    "Search for whatever you like",
-    "Search for your next adventure"
+    "search for anything",
+    "search for your favourite songs",
+    "search for something new",
+    "search for inspiration",
+    "search for whatever you like",
+    "search for your next adventure"
 ];
 let phraseIndex = 0;
 let charIndex = 0;

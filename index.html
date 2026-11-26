@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-MKn5NWVBEuQXJE7TSKSgPUmMiSCmVTfCsR+VSSeQpHnoyJQZZFn/kBn+Ht5jZDPQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -42,22 +43,118 @@
                                 <img src="Assets/Icons/cart.png" class="cart-icon">
                             </a>
                         </li>
+                    </ul>
                 </div>
             </dialog>
         </div>
     </nav>
 
+    <!-- herooooo -->
     <div class="hero">
-        <br><br>
-        <h1 class="title focus-in-contract">soundora</h1>
-        <h5 class="subtitle focus-in-contrac-delay">a place for your favorite songs.</h5>
-        <br><br>
+        <div class="welcomeherotext">
+            <p>WELCOME TO...</p>
+        </div>
+        <div class="title-holder">
+            <br><br>
+            <h1 class="title slide-in-blurred-left">soundora</h1>
+            <h5 class="subtitle text-focus-in">a place for your favorite songs.</h5>
+            <br><br>
+        </div>
+        <div class="miniherotext">
+            <h6>vinyl Records music culture since 2026</h6>
+        </div>
+        <br>
     </div>
 
     <br><br><br>
-    <h1 class="smalltitle"> > This Week’s Best-Selling Vinyl Records</h1>
-    <hr class="spacer1">
+
+    
+    <!-- trending records title -->
+    <div class="section-header">
+        <h2 class="section-title">> trending records</h2>
+        <span class="divider-line" aria-hidden="true"></span>
+        <a href="#" class="section-link">view all ➔</a>
+    </div>
+    
+    <br>
+    
+    <div class="row row-cols-1 md:row-cols-4 g-4 cards-holder-homepage">
+        <div class="col">
+            <div class="card rounded-0">
+                <img src="Data/covers/269572838.jpg" class="card-img-top rounded-0 p-5" alt="...">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div>
+                            <h4 class="card-title">Thriller</h4>
+                            <p class="card-text mb-0">Michael Jackson</p>
+                        </div>
+                        <button class="btn rounded-0 d-flex align-items-center justify-content-center cartbuttom" type="button">
+                            <img src="Assets/Icons/add.png" alt="" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-0">
+                <img src="Data/covers/6819802963.jpg" class="card-img-top rounded-0 p-5" alt="...">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div>
+                            <h4 class="card-title">Flower In A Hurricane ...</h4>
+                            <p class="card-text mb-0">Justice, Tame Impala, SZA & Ki ...</p>
+                        </div>
+                        <button class="btn rounded-0 d-flex align-items-center justify-content-center cartbuttom" type="button">
+                            <img src="Assets/Icons/add.png" alt="" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-0">
+                <img src="Data/covers/696884422.jpg" class="card-img-top rounded-0 p-5" alt="...">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div>
+                            <h4 class="card-title">Homework</h4>
+                            <p class="card-text mb-0">Daft Punk</p>
+                        </div>
+                        <button class="btn rounded-0 d-flex align-items-center justify-content-center cartbuttom" type="button">
+                            <img src="Assets/Icons/add.png" alt="" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card rounded-0">
+                <img src="Data/covers/1442245025.jpg" class="card-img-top rounded-0 p-5" alt="...">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div>
+                            <h4 class="card-title">Big Fish Theory</h4>
+                            <p class="card-text mb-0">Vince Staples</p>
+                        </div>
+                        <button class="btn rounded-0 d-flex align-items-center justify-content-center cartbuttom" type="button">
+                            <img src="Assets/Icons/add.png" alt="" width="20" height="20">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br><br><br>
+
+    <!-- trending records title -->
+    <div class="section-header">
+        <h2 class="section-title">> This Week’s Best-Selling Records</h2>
+        <span class="divider-line" aria-hidden="true"></span>
+        <a href="#" class="section-link">view all ➔</a>
+    </div>
+
+        <br><br><br>    <br><br><br>    <br><br><br>    <br><br><br>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-+PW0IDVGGwmpaBQvcXY+W0BcpHpITFB3dSfSoGvDdHtLbrLpSbpGcvtQRM/BJpz+"
