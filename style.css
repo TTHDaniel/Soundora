@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* #222831; - BCK Darker */
 /* #5c4e49 - Primary Inactiv  */
 /* #af5030 - Primary*/
 
@@ -30,28 +29,6 @@ html {-ms-overflow-style: none;} /* explorer */
 }
 .section-header {
     animation: cardsFadeIn 1s ease .25s both;
-}
-
-/* karty animacion */
-.cards-holder-homepage .card {
-    overflow: hidden;
-    transition: transform 250ms ease, box-shadow 250ms ease;
-}
-.cards-holder-homepage .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
-}
-.cards-holder-homepage .card-img-top {
-    transition: transform 300ms ease;
-}
-.cards-holder-homepage .card:hover .card-img-top {
-    transform: scale(1.04);
-}
-@media (prefers-reduced-motion: reduce) {
-    .cards-holder-homepage .card,
-    .cards-holder-homepage .card-img-top {
-        transition: none;
-    }
 }
 
 
@@ -292,4 +269,25 @@ body{
     background-color: transparent;
     transition: all 0.25s ease-in-out;
     transform: scale(1.1);
+}
+
+.cards-holder-homepage .card {
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: all 250ms ease;
+    background-color: #181818;
+}
+
+.cards-holder-homepage .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+    background-color: #af5030;
+}
+
+.cards-holder-homepage .card-img-top {
+    transition: transform 300ms ease;
+}
+
+.cards-holder-homepage .card:hover .card-img-top {
+    transform: scale(1.04);
 }
