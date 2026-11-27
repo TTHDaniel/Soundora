@@ -41,12 +41,6 @@ function typeWriter() {
 typeWriter();
 
 
-function replaceText() {
-    
-}
-
-
-
 
 
 
