@@ -8,7 +8,7 @@ const phrases = [
     "search for whatever you like",
     "search for your next adventure"
 ];
-const trendingrecordsElement = document.getElementById("trendingrecordsElement")
+
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -74,7 +74,7 @@ function trendingRecordsRender() {
         let div = document.createElement("div")
         div.classList = "col";
         if (element.title == "Thriller" || element.title == "Flower In A Hurricane [From GTAVI: Original Score] - Single" || element.title == "Homework" || element.title == "Big Fish Theory") {
-            console.log(element)
+            // console.log(element)
             div.innerHTML = `
                 <div class="card rounded-0">
                 <img src="${element.artworkUrl}" class="card-img-top rounded-0 p-5" alt="${element.artworkUrl}}">
@@ -99,12 +99,15 @@ function trendingRecordsRender() {
     });
 }
 
+
+//bestselling recordok betoltese az elozo modszerrel
+
 function bestsellingRecordsRender() {
     data.forEach(element => {
         let div = document.createElement("div")
         div.classList = "col";
         if (element.title == "All Eyez On Me" || element.title == "ICEMAN" || element.title == "good kid, m.A.A.d city (Deluxe Version)" || element.title == "Binary - Single") {
-            console.log(element)
+            // console.log(element)
             div.innerHTML = `
                 <div class="card rounded-0">
                 <img src="${element.artworkUrl}" class="card-img-top rounded-0 p-5" alt="${element.artworkUrl}}">
