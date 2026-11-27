@@ -11,6 +11,10 @@ const phrases = [
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+const trendingrecordsElement = document.getElementById("trendingrecordsElement")
+
+let data = fetch("/albumsraw")
+console.log(data);
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex]; //jelenleg kivalasztott mondat
@@ -35,3 +39,9 @@ function typeWriter() {
     }
 }
 typeWriter();
+
+
+
+
+
+
