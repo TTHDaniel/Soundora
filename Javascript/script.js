@@ -9,12 +9,14 @@ const phrases = [
     "search for your next adventure"
 ];
 
+const trendingrecordsElement = document.getElementById("trendingrecords")
+const bestsellingrecordsElement = document.getElementById("bestsellingrecords")
+
+
+
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-
-
-
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex]; //jelenleg kivalasztott mondat
@@ -41,14 +43,6 @@ function typeWriter() {
 typeWriter();
 
 
-
-
-
-
-const trendingrecordsElement = document.getElementById("trendingrecords")
-const bestsellingrecordsElement = document.getElementById("bestsellingrecords")
-
-
 // Albumok betoltese a data valtozoba, a /Data/albums.json-bol async funkcio hasznalataval
 let data = []
 async function loadAlbums() {
@@ -64,7 +58,6 @@ async function loadAlbums() {
     }
 }
 loadAlbums();
-
 
 //Trending recordok megjelenítése szokásos módszerrel. 
 
@@ -90,18 +83,13 @@ function trendingRecordsRender() {
                     </div>
                 </div>
             </div>
-                
                 `
                 trendingrecordsElement.appendChild(div)
         }
-
-
     });
 }
 
-
 //bestselling recordok betoltese az elozo modszerrel
-
 function bestsellingRecordsRender() {
     data.forEach(element => {
         let div = document.createElement("div")
@@ -123,15 +111,8 @@ function bestsellingRecordsRender() {
                     </div>
                 </div>
             </div>
-                
                 `
                 bestsellingrecordsElement.appendChild(div)
         }
-
-
     });
 }
-
-
-
-
