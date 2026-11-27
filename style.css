@@ -27,6 +27,23 @@ body{
     color: aliceblue;
 }    
 
+#cookieModal {
+    position: fixed;
+    inset: auto 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: min(80vh, 32rem);
+    margin: 0;
+    padding: 1.5rem clamp(1rem, 5vw, 4rem);
+    border: 0;
+    border-top: 3px solid #af5030;
+    color: #f7f3eb;
+    background: #171717;
+    box-shadow: 0 -0.75rem 2rem rgb(0 0 0 / 30%);
+    border-radius: 0;
+    font-family: "Quantico", sans-serif !important;
+}
+
 .welcomeherotext{
     font-family: "Libre Barcode 128 Text", system-ui;
     font-weight: 400;
@@ -95,6 +112,24 @@ body{
     font-family: "Quantico", sans-serif;
     border-color: #af5030;
 }    
+
+.btn {
+    border-radius: 0 !important;
+    font-family: "Quantico", sans-serif !important;
+    text-transform: lowercase !important;
+    transition: all 0.25s ease !important;
+    border-color: #5c4e49;
+    outline: none !important;
+}
+
+.btn:active, .btn:hover {
+    border-radius: 0 !important;
+    font-family: "Quantico", sans-serif !important;
+    text-transform: lowercase !important;
+    transition: all 0.25s ease !important;
+    border-color: #af5030;
+    outline: none !important;
+}
 
 .about-p{
     font-family: "IBM Plex Mono", monospace;
