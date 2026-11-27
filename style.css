@@ -100,9 +100,18 @@ body{
     font-family: "IBM Plex Mono", monospace;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     text-transform: lowercase;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 200;
+    font-size: 1.4rem;
     color: aliceblue;
+}
+
+.about-p-holder{
+    margin: auto;
+    width: 70%;
+    text-shadow: 6px 6px 0px rgba(0,0,0,1);
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .title{
