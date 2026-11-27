@@ -13,8 +13,8 @@ let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-let data = fetch("/albumsraw") // ez it minek van??? -dani
-console.log(data); // ez it minek van??? -dani
+let data =  fetch("/Data/albums.json")
+console.log(data);
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex]; //jelenleg kivalasztott mondat
