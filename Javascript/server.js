@@ -24,7 +24,14 @@ const server = http.createServer((request, response) => {
     const staticFiles = {
         "/style.css": { file: "style.css", contentType: "text/css; charset=utf-8" },
         "/Javascript/script.js": { file: "Javascript/script.js", contentType: "text/javascript; charset=utf-8" },
-        "/Data/albums.json": { file: "Data/albums.json", contentType: "application/json; charset=utf-8" }
+        "/Data/albums.json": { file: "Data/albums.json", contentType: "application/json; charset=utf-8" },
+
+        "/Assets/Icons/add.png": { file: "Assets/Icons/add.png", contentType: "image/png; charset=utf-8" },
+        "/Assets/Icons/cart.png": { file: "Assets/Icons/cart.png", contentType: "image/png; charset=utf-8" },
+        "/Assets/T_heroFINAL.webp": { file: "Assets/T_heroFINAL.webp", contentType: "image/webp; charset=utf-8" },
+
+
+        
     };
 
     const staticFile = staticFiles[url.pathname];
