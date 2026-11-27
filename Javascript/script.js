@@ -12,8 +12,6 @@ const phrases = [
 const trendingrecordsElement = document.getElementById("trendingrecords")
 const bestsellingrecordsElement = document.getElementById("bestsellingrecords")
 
-
-
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
