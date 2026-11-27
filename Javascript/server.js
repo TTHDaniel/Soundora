@@ -2,6 +2,10 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 
+
+//json data beolvasasa WOW! micsoda megoldas!
+var json_data = require('../data/albums.json');
+
 const server = http.createServer((request, response) => {
     response.setHeader("Access-Control-Allow-Origin", "*");
     response.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -18,7 +22,7 @@ const server = http.createServer((request, response) => {
 
     const staticFiles = {
         "/style.css": { file: "style.css", contentType: "text/css; charset=utf-8" },
-        "/Javascript/script.js": { file: "Javascript/script.js", contentType: "text/javascript; charset=utf-8" }
+        "/script.js": { file: "Javascript/script.js", contentType: "text/javascript; charset=utf-8" },
     };
 
     const staticFile = staticFiles[url.pathname];
