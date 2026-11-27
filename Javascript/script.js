@@ -13,7 +13,7 @@ let charIndex = 0;
 let isDeleting = false;
 const trendingrecordsElement = document.getElementById("trendingrecordsElement")
 
-let data = fetch("/albumsraw")
+let data =  fetch("/Data/albums.json")
 console.log(data);
 
 function typeWriter() {

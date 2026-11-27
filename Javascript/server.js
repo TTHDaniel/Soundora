@@ -24,7 +24,7 @@ const server = http.createServer((request, response) => {
     const staticFiles = {
         "/style.css": { file: "style.css", contentType: "text/css; charset=utf-8" },
         "/Javascript/script.js": { file: "Javascript/script.js", contentType: "text/javascript; charset=utf-8" },
-        "/Data/albums.json": { file: "Data/albums.json", contentType: "applications/json; charset=utf-8"}
+        "/Data/albums.json": { file: "Data/albums.json", contentType: "application/json; charset=utf-8" }
     };
 
     const staticFile = staticFiles[url.pathname];
@@ -58,12 +58,12 @@ const server = http.createServer((request, response) => {
     }
 
     if (request.method === "GET" && url.pathname === "/albumsraw") {
-        
-            response.writeHead(200, { "Content-Type": "applications/json; charset=utf-8" });
 
-            console.log(albumsjson)
-            response.end(JSON.stringify(albumsjson));
-            return;
+        response.writeHead(200, { "Content-Type": "applications/json; charset=utf-8" });
+
+        console.log(albumsjson)
+        response.end(JSON.stringify(albumsjson));
+        return;
 
     }
 
