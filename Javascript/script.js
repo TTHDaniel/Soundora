@@ -8,6 +8,7 @@ const phrases = [
     "search for whatever you like",
     "search for your next adventure"
 ];
+const trendingrecordsElement = document.getElementById("trendingrecordsElement")
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
