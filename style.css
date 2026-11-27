@@ -96,6 +96,14 @@ body{
     border-color: #af5030;
 }    
 
+.about-p{
+    font-family: "IBM Plex Mono", monospace;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
 
 .title{
     font-family: "Quantico", sans-serif;
@@ -104,6 +112,21 @@ body{
     font-weight: 800;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     text-transform: lowercase;
+}    
+
+.title-about{
+    font-family: "Quantico", sans-serif;
+    font-size: 5rem;
+    width: 30%;
+    font-weight: 800;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    text-transform: lowercase;
+    background: linear-gradient(0deg,rgba(196, 104, 73, 1) 0%, rgba(140, 71, 48, 1) 100%);
+
+    clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%); /* corner-shape nem tamogatott firefoxban szoval igy kellet megoldani*/
+    margin-top: 4rem;
+    margin-left: 9rem;
+    transform: rotate(1deg);
 }    
 
 .miniherotext{
@@ -216,6 +239,7 @@ body{
     font-weight: 300;
     font-style: normal;
     text-transform: uppercase;
+    color: aliceblue;    
 }
 
 .card-text{
@@ -226,6 +250,7 @@ body{
     font-size: small;
     margin-top: -0.5rem;
     text-indent: 1rem;
+    color: aliceblue;    
 }
 
 .cartbuttom img{
