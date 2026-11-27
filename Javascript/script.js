@@ -8,13 +8,13 @@ const phrases = [
     "search for whatever you like",
     "search for your next adventure"
 ];
+const trendingrecordsElement = document.getElementById("trendingrecordsElement")
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const trendingrecordsElement = document.getElementById("trendingrecordsElement")
 
-let data = fetch("/albumsraw")
-console.log(data);
+let data = fetch("/albumsraw") // ez it minek van??? -dani
+console.log(data); // ez it minek van??? -dani
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex]; //jelenleg kivalasztott mondat
@@ -39,6 +39,11 @@ function typeWriter() {
     }
 }
 typeWriter();
+
+
+function replaceText() {
+    
+}
 
 
 
